@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary-color: #3B82F6;
+  --primary-hover: #2563EB;
+  --secondary-color: #1E293B;
+  --accent-color: #8B5CF6;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    @apply bg-white text-gray-800;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  .section-heading {
+    @apply relative mb-4 inline-block;
+  }
+  
+  .section-heading::after {
+    content: '';
+    @apply absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-blue-500 rounded-full;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:-translate-y-0.5;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300;
+  }
+
+  .nav-link {
+    @apply relative py-2 text-gray-600 hover:text-blue-600 transition-colors;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .nav-link.active {
+    @apply text-blue-600 font-medium;
+  }
+
+  .nav-link.active::after {
+    @apply w-full h-0.5;
+  }
+}
+
+/* Custom Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5c5c5;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c5c5c5 #f1f1f1;
+}
+
+/* Background color for footer */
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
