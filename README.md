@@ -1,4 +1,3 @@
-```markdown
 # Dhanush Portfolio
 
 This repository contains the source code for my personal portfolio website. It showcases my skills, projects, and achievements.
@@ -17,15 +16,15 @@ This repository contains the source code for my personal portfolio website. It s
 ## How to Run
 
 1. Clone the repo:
-   ```bash
+   ```
    git clone https://github.com/paperbukit/dhanush-portfolio.git
    ```
 2. Install dependencies:
-   ```bash
+   ```
    npm install
    ```
 3. Start the server:
-   ```bash
+   ```
    npm start
    ```
 
