@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image'; // Importing Next.js Image component
 import profilePicture from './pp.jpg'; // Correctly importing the profile picture
 
+const ContactPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <div className="bg-white rounded-lg shadow-lg p-6 w-80">
+            <h2 className="text-xl font-bold mb-4">Contact Me</h2>
+            <ul className="space-y-2">
+                <li><strong>Email:</strong> <a href="mailto:dhanushhs1@outlook.com" className="text-blue-600 hover:underline">dhanushhs1@outlook.com</a></li>
+                <li><strong>Instagram:</strong> <a href="https://instagram.com/paperbukit" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">@paperbukit</a></li>
+                <li><strong>Twitter:</strong> <a href="https://x.com/paperbukit" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">x.com/paperbukit</a></li>
+                <li><strong>WhatsApp:</strong> <a href="https://wa.me/8660833055" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">8660833055</a></li>
+            </ul>
+            <button onClick={onClose} className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Close</button>
+        </div>
+    </div>
+);
+
 const Bio: React.FC = () => {
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+
     // Example data - would be fetched from Sanity in a real implementation
     const bioData = {
         name: 'Dhanush H S',
@@ -56,14 +73,14 @@ const Bio: React.FC = () => {
                                 >
                                     View My Work
                                 </motion.a>
-                                <motion.a 
-                                    href="#contact"
+                                <motion.button 
+                                    onClick={() => setIsPopupOpen(true)}
                                     className="btn bg-white border-2 border-gray-200 text-gray-700 hover:border-gray-300"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
                                     Contact Me
-                                </motion.a>
+                                </motion.button>
                             </div>
                             
                             <div className="mt-10 flex items-center space-x-5">
@@ -132,6 +149,7 @@ const Bio: React.FC = () => {
                     </motion.div>
                 </div>
             </div>
+            {isPopupOpen && <ContactPopup onClose={() => setIsPopupOpen(false)} />}
         </section>
     );
 };
