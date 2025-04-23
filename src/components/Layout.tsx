@@ -100,7 +100,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
     return (
         <div className="min-h-screen flex flex-col font-sans">
-            <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-3' : 'bg-white/10 backdrop-blur-sm py-5'}`}>
+            <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg py-3' : 'bg-white shadow-md py-5'}`}>
                 <div className="container mx-auto flex justify-between items-center px-4">
                     <motion.div 
                         initial={{ opacity: 0, x: -20 }}
