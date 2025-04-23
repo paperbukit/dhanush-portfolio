@@ -37,4 +37,3 @@ This repository contains the source code for my personal portfolio website. It s
 ---
 
 ⭐️ Don't forget to star this repo if you like it!
-```
