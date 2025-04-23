@@ -4,7 +4,8 @@ module.exports = {
     domains: ['your-image-domain.com'], // Add your image domains here
   },
   webpack: (config) => {
-    // Custom webpack configurations can be added here
+    config.externals = config.externals || [];
+    config.externals.push('sanity');
     return config;
   },
 };
