@@ -33,7 +33,7 @@ const Bio: React.FC = () => {
     };
 
     return (
-        <section id="bio" className="min-h-screen flex items-center relative overflow-hidden py-20">
+        <section id="bio" className="min-h-screen flex items-center relative overflow-hidden py-5">
             {/* Animated background elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gray-100 rounded-full opacity-20 blur-3xl"></div>
