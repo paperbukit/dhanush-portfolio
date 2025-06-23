@@ -44,7 +44,7 @@ const Projects: React.FC = () => {
         {
             title: 'AI PDF Chatbot',
             description: 'A chatbot for interacting with PDF documents using AI.',
-            tags: ['React', 'JavaScript', 'CSS'],
+            tags: ['Python', 'Streamlit', 'LangChain', 'Groq Llama 3', 'AI'],
             link: 'https://github.com/paperbukit/pdf-chatbot',
             liveLink: 'https://paperbukit-pdf-chatbot.streamlit.app/',
             banner: '/talking_robot_app_logo_icon_di.jpeg',
