@@ -253,30 +253,6 @@ const Skills: React.FC = () => {
                         {renderSkillBadges(skills.interests, 'bg-amber-50 text-amber-700')}
                     </div>
                 </motion.div>
-
-                {/* Call to action */}
-                <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.5, duration: 0.6 }}
-                    className="mt-16 text-center"
-                >
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        I'm constantly learning and expanding my skills. Currently exploring more about machine learning and cloud architecture.
-                    </p>
-                    <motion.a 
-                        href="#projects"
-                        className="mt-8 inline-flex items-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        See My Projects
-                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                        </svg>
-                    </motion.a>
-                </motion.div>
             </div>
         </section>
     );
