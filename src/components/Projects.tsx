@@ -10,8 +10,8 @@ const Projects: React.FC = () => {
             description: 'A chatbot for Discord servers powered by AI.',
             tags: ['Node.js', 'Discord.js', 'AI'],
             link: 'https://github.com/paperbukit/AI-Discord-Chatbot',
-            bgcolor: 'from-blue-400 to-indigo-600',
-            banner: '/p-l-2_t8WTny6iw-unsplash.jpg' // Corrected path for AI chatbot image
+            bgcolor: 'from-gray-400 to-gray-600',
+            banner: '\discord_ai_bot_app_logo_icon_d.jpeg' // Corrected path for AI chatbot image
         },
         {
             title: 'eBOOK Platform',
@@ -19,7 +19,7 @@ const Projects: React.FC = () => {
             tags: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
             link: 'https://github.com/paperbukit/eBOOK',
             bgcolor: 'from-amber-400 to-orange-600',
-            banner: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400' // Existing banner image for eBOOK
+            banner: '\e-book_tablet_kindle_app_logo_.jpeg' // Existing banner image for eBOOK
         },
         {
             title: 'Cricket Score Predictor',
@@ -27,7 +27,7 @@ const Projects: React.FC = () => {
             tags: ['Python', 'Machine Learning', 'Flask', 'Bootstrap'],
             link: 'https://github.com/paperbukit/for-college/tree/main/python/cricket_score_prediction',
             bgcolor: 'from-emerald-400 to-teal-600',
-            banner: '/zoshua-colah-UvGtaCC1eVs-unsplash.jpg' // Corrected path for Cricket Score Predictor image
+            banner: '\cricket_stadium_app_logo_icon_.jpeg' // Corrected path for Cricket Score Predictor image
         }
     ];
 
@@ -84,8 +84,8 @@ const Projects: React.FC = () => {
     return (
         <section id="projects" className="py-24 bg-white relative overflow-hidden">
             {/* Background decoration */}
-            <div className="absolute top-40 right-0 w-72 h-72 bg-blue-50 rounded-full opacity-70 blur-3xl"></div>
-            <div className="absolute -bottom-20 left-0 w-72 h-72 bg-purple-50 rounded-full opacity-70 blur-3xl"></div>
+            <div className="absolute top-40 right-0 w-72 h-72 bg-gray-50 rounded-full opacity-70 blur-3xl"></div>
+            <div className="absolute -bottom-20 left-0 w-72 h-72 bg-gray-50 rounded-full opacity-70 blur-3xl"></div>
             
             <div className="container mx-auto px-4 relative z-10">
                 <motion.div
@@ -143,7 +143,7 @@ const Projects: React.FC = () => {
                             </div>
                             
                             <div className="p-6 flex flex-col flex-grow">
-                                <h3 className="text-xl font-bold mb-3 text-gray-800 group-hover:text-blue-600 transition-colors">{project.title}</h3>
+                                <h3 className="text-xl font-bold mb-3 text-gray-800 group-hover:text-gray-600 transition-colors">{project.title}</h3>
                                 <p className="text-gray-600 mb-6 flex-grow">{project.description}</p>
                                 <div className="flex flex-wrap gap-2 mt-auto">
                                     {project.tags.map((tag, i) => (
@@ -177,8 +177,8 @@ const Projects: React.FC = () => {
                             <span className="relative z-10">More Projects on GitHub</span>
                             
                             {/* Highlight effect on hover */}
-                            <span className="absolute inset-0 translate-y-1 translate-x-1 bg-blue-700 group-hover:translate-y-0 group-hover:translate-x-0 transition-transform duration-200 rounded-lg"></span>
-                            <span className="absolute inset-0 bg-blue-600 group-hover:bg-blue-500 transition-colors duration-200 rounded-lg"></span>
+                            <span className="absolute inset-0 translate-y-1 translate-x-1 bg-gray-700 group-hover:translate-y-0 group-hover:translate-x-0 transition-transform duration-200 rounded-lg"></span>
+                            <span className="absolute inset-0 bg-gray-600 group-hover:bg-gray-500 transition-colors duration-200 rounded-lg"></span>
                         </a>
                     </div>
                 </motion.div>

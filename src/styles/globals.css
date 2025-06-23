@@ -5,10 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --primary-color: #3B82F6;
-  --primary-hover: #2563EB;
-  --secondary-color: #1E293B;
-  --accent-color: #8B5CF6;
+  --primary-color: #4B5563; /* Gray-600 */
+  --primary-hover: #374151; /* Gray-700 */
+  --secondary-color: #1F2937; /* Gray-800 */
+  --accent-color: #6B7280; /* Gray-500 */
 }
 
 @layer base {
@@ -31,7 +31,7 @@
   
   .section-heading::after {
     content: '';
-    @apply absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-blue-500 rounded-full;
+    @apply absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gray-500 rounded-full;
   }
 }
 
@@ -41,7 +41,7 @@
   }
   
   .btn-primary {
-    @apply bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg;
+    @apply bg-gray-600 text-white hover:bg-gray-700 shadow-md hover:shadow-lg;
   }
 
   .card {
@@ -49,12 +49,12 @@
   }
 
   .nav-link {
-    @apply relative py-2 text-gray-600 hover:text-blue-600 transition-colors;
+    @apply relative py-2 text-gray-600 hover:text-gray-800 transition-colors;
   }
 
   .nav-link::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300;
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gray-500 transition-all duration-300;
   }
 
   .nav-link:hover::after {
@@ -62,7 +62,7 @@
   }
 
   .nav-link.active {
-    @apply text-blue-600 font-medium;
+    @apply text-gray-800 font-medium;
   }
 
   .nav-link.active::after {

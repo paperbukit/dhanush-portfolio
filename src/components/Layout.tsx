@@ -107,7 +107,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <Link href="/" className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-500">
+                        <Link href="/" className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-gray-800">
                             Dhanush H S
                         </Link>
                     </motion.div>
@@ -116,7 +116,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                     <div className="md:hidden">
                         <button 
                             onClick={toggleMobileMenu}
-                            className="text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-md p-1 transition-colors"
+                            className="text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 rounded-md p-1 transition-colors"
                             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
                         >
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -141,12 +141,12 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                                 <motion.li key={section} variants={itemVariants}>
                                     <Link 
                                         href={`#${section}`} 
-                                        className={`nav-link relative px-2 py-2 transition-colors duration-200 ${activeSection === section ? 'text-blue-600 font-medium' : 'text-gray-600 hover:text-gray-900'}`}
+                                        className={`nav-link relative px-2 py-2 transition-colors duration-200 ${activeSection === section ? 'text-gray-800 font-medium' : 'text-gray-600 hover:text-gray-900'}`}
                                     >
                                         {section === 'bio' ? 'About' : section.charAt(0).toUpperCase() + section.slice(1)}
                                         {activeSection === section && (
                                             <motion.span 
-                                                className="absolute bottom-0 left-0 h-0.5 bg-blue-600 w-full" 
+                                                className="absolute bottom-0 left-0 h-0.5 bg-gray-600 w-full" 
                                                 layoutId="navIndicator"
                                                 transition={{ type: "spring", stiffness: 500, damping: 30 }}
                                             />
@@ -176,7 +176,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                                                 href={`#${section}`} 
                                                 className={`block py-2 px-4 rounded-lg transition-all duration-200 ${
                                                     activeSection === section 
-                                                        ? 'bg-blue-50 text-blue-600 font-medium' 
+                                                        ? 'bg-gray-50 text-gray-600 font-medium' 
                                                         : 'text-gray-600 hover:bg-gray-50'
                                                 }`}
                                                 onClick={() => setMobileMenuOpen(false)}
@@ -197,12 +197,12 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 {children}
             </main>
             
-            <footer className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white pt-12 pb-8 mt-16">
+            <footer className="bg-gradient-to-r from-gray-800 to-gray-900 text-white pt-12 pb-8 mt-16">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
                         {/* About section */}
                         <div className="md:col-span-5">
-                            <h3 className="text-xl font-bold mb-4 inline-block pb-1 border-b-2 border-blue-500">Dhanush H S</h3>
+                            <h3 className="text-xl font-bold mb-4 inline-block pb-1 border-b-2 border-gray-500">Dhanush H S</h3>
                             <p className="text-gray-300 mb-6">
                                 Aspiring Developer & AI Enthusiast passionate about creating innovative solutions 
                                 and exploring the intersection of technology and creativity.
@@ -214,7 +214,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                                         href={link.url}
                                         target="_blank" 
                                         rel="noopener noreferrer"
-                                        className="bg-blue-800 hover:bg-blue-700 text-white p-2 rounded-full transition-colors duration-300"
+                                        className="bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full transition-colors duration-300"
                                         aria-label={link.name}
                                     >
                                         {link.icon}
@@ -225,7 +225,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                         
                         {/* Quick links */}
                         <div className="md:col-span-3">
-                            <h3 className="text-lg font-semibold mb-4 inline-block pb-1 border-b-2 border-blue-500">Quick Links</h3>
+                            <h3 className="text-lg font-semibold mb-4 inline-block pb-1 border-b-2 border-gray-500">Quick Links</h3>
                             <ul className="space-y-2">
                                 <li>
                                     <Link href="#bio" className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
@@ -264,13 +264,13 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                         
                         {/* Contact section */}
                         <div className="md:col-span-4">
-                            <h3 className="text-lg font-semibold mb-4 inline-block pb-1 border-b-2 border-blue-500">Get In Touch</h3>
+                            <h3 className="text-lg font-semibold mb-4 inline-block pb-1 border-b-2 border-gray-500">Get In Touch</h3>
                             <p className="text-gray-300 mb-4">
                                 Have a question or want to work together? Feel free to reach out!
                             </p>
                             <a 
                                 href="mailto:your-email@example.com" 
-                                className="inline-flex items-center px-5 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium transition-colors duration-300"
+                                className="inline-flex items-center px-5 py-2 rounded-lg bg-gray-600 hover:bg-gray-500 text-white font-medium transition-colors duration-300"
                             >
                                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -280,7 +280,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                         </div>
                     </div>
                     
-                    <div className="mt-10 pt-6 border-t border-blue-800 text-center text-gray-400">
+                    <div className="mt-10 pt-6 border-t border-gray-800 text-center text-gray-400">
                         <p>&copy; {new Date().getFullYear()} Dhanush H S. All rights reserved.</p>
                     </div>
                 </div>

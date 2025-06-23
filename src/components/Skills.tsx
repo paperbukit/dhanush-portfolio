@@ -106,7 +106,7 @@ const Skills: React.FC = () => {
                     className="mb-16 text-center"
                 >
                     <div className="inline-block mb-3">
-                        <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+                        <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
                             My Expertise
                         </span>
                     </div>
@@ -129,10 +129,10 @@ const Skills: React.FC = () => {
                         <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Key Proficiencies</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div>
-                                {renderSkillBar('JavaScript', proficiencyLevels['JavaScript'], 'bg-blue-500')}
-                                {renderSkillBar('TypeScript', proficiencyLevels['TypeScript'], 'bg-blue-600')}
-                                {renderSkillBar('React', proficiencyLevels['React'], 'bg-blue-700')}
-                                {renderSkillBar('Next.js', proficiencyLevels['Next.js'], 'bg-blue-800')}
+                                {renderSkillBar('JavaScript', proficiencyLevels['JavaScript'], 'bg-gray-500')}
+                                {renderSkillBar('TypeScript', proficiencyLevels['TypeScript'], 'bg-gray-600')}
+                                {renderSkillBar('React', proficiencyLevels['React'], 'bg-gray-700')}
+                                {renderSkillBar('Next.js', proficiencyLevels['Next.js'], 'bg-gray-800')}
                             </div>
                             <div>
                                 {renderSkillBar('Node.js', proficiencyLevels['Node.js'], 'bg-green-600')}
@@ -154,15 +154,15 @@ const Skills: React.FC = () => {
                         className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100"
                     >
                         <motion.div variants={categoryVariants} className="flex items-center mb-4">
-                            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                                <svg className="w-7 h-7 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                            <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg className="w-7 h-7 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                                 </svg>
                             </div>
                             <h3 className="text-xl font-bold text-gray-900">Programming Languages</h3>
                         </motion.div>
                         <div className="flex flex-wrap gap-3 mt-6">
-                            {renderSkillBadges(skills.programming, 'bg-blue-50 text-blue-700')}
+                            {renderSkillBadges(skills.programming, 'bg-gray-50 text-gray-700')}
                         </div>
                     </motion.div>
 
@@ -175,15 +175,15 @@ const Skills: React.FC = () => {
                         className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100"
                     >
                         <motion.div variants={categoryVariants} className="flex items-center mb-4">
-                            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
-                                <svg className="w-7 h-7 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                            <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg className="w-7 h-7 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clipRule="evenodd" />
                                 </svg>
                             </div>
                             <h3 className="text-xl font-bold text-gray-900">Web Development</h3>
                         </motion.div>
                         <div className="flex flex-wrap gap-3 mt-6">
-                            {renderSkillBadges(skills.webDevelopment, 'bg-purple-50 text-purple-700')}
+                            {renderSkillBadges(skills.webDevelopment, 'bg-gray-50 text-gray-700')}
                         </div>
                     </motion.div>
 
@@ -267,7 +267,7 @@ const Skills: React.FC = () => {
                     </p>
                     <motion.a 
                         href="#projects"
-                        className="mt-8 inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                        className="mt-8 inline-flex items-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >

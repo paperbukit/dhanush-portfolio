@@ -8,12 +8,12 @@ const ContactPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => (
         <div className="bg-white rounded-lg shadow-lg p-6 w-80">
             <h2 className="text-xl font-bold mb-4">Contact Me</h2>
             <ul className="space-y-2">
-                <li><strong>Email:</strong> <a href="mailto:dhanushhs1@outlook.com" className="text-blue-600 hover:underline">dhanushhs1@outlook.com</a></li>
-                <li><strong>Instagram:</strong> <a href="https://instagram.com/paperbukit" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">@paperbukit</a></li>
-                <li><strong>Twitter:</strong> <a href="https://x.com/paperbukit" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">x.com/paperbukit</a></li>
-                <li><strong>WhatsApp:</strong> <a href="https://wa.me/8660833055" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">8660833055</a></li>
+                <li><strong>Email:</strong> <a href="mailto:dhanushhs1@outlook.com" className="text-gray-600 hover:underline">dhanushhs1@outlook.com</a></li>
+                <li><strong>Instagram:</strong> <a href="https://instagram.com/paperbukit" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:underline">@paperbukit</a></li>
+                <li><strong>Twitter:</strong> <a href="https://x.com/paperbukit" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:underline">x.com/paperbukit</a></li>
+                <li><strong>WhatsApp:</strong> <a href="https://wa.me/8660833055" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:underline">8660833055</a></li>
             </ul>
-            <button onClick={onClose} className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Close</button>
+            <button onClick={onClose} className="mt-4 px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700">Close</button>
         </div>
     </div>
 );
@@ -36,8 +36,8 @@ const Bio: React.FC = () => {
         <section id="bio" className="min-h-screen flex items-center relative overflow-hidden py-20">
             {/* Animated background elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-100 rounded-full opacity-20 blur-3xl"></div>
-                <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-purple-100 rounded-full opacity-30 blur-3xl"></div>
+                <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gray-100 rounded-full opacity-20 blur-3xl"></div>
+                <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gray-100 rounded-full opacity-30 blur-3xl"></div>
                 <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-green-100 rounded-full opacity-20 blur-3xl floating"></div>
             </div>
 
@@ -50,14 +50,14 @@ const Bio: React.FC = () => {
                     >
                         <div className="max-w-lg">
                             <div className="mb-4">
-                                <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+                                <span className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
                                     {bioData.education}
                                 </span>
                             </div>
                             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                                 Hi, I'm {bioData.name}
                             </h1>
-                            <h2 className="text-2xl md:text-3xl text-blue-600 font-semibold mb-6">
+                            <h2 className="text-2xl md:text-3xl text-gray-600 font-semibold mb-6">
                                 {bioData.headline}
                             </h2>
                             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -116,9 +116,9 @@ const Bio: React.FC = () => {
                             </div>
                             
                             {/* Decorative circular backgrounds */}
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full z-10 translate-x-10 -translate-y-10"></div>
-                            <div className="absolute bottom-0 left-0 w-24 h-24 bg-purple-100 rounded-full z-10 -translate-x-10 translate-y-10"></div>
-                            
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-gray-100 rounded-full z-10 translate-x-10 -translate-y-10"></div>
+                            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gray-100 rounded-full z-10 -translate-x-10 translate-y-10"></div>
+
                             {/* Floating badges */}
                             <motion.div 
                                 className="absolute -top-4 -left-8 bg-white shadow-lg rounded-lg px-3 py-2 z-30"
@@ -126,7 +126,7 @@ const Bio: React.FC = () => {
                                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                             >
                                 <div className="flex items-center">
-                                    <svg className="w-5 h-5 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <svg className="w-5 h-5 text-gray-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
                                     </svg>
                                     <span className="text-sm font-medium">Class of {bioData.graduationYear}</span>
@@ -142,7 +142,7 @@ const Bio: React.FC = () => {
                                     <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                                     </svg>
-                                    <a href="https://vvce.ac.in" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-blue-600 hover:no-underline">{bioData.college}</a>
+                                    <a href="https://vvce.ac.in" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gray-600 hover:no-underline">{bioData.college}</a>
                                 </div>
                             </motion.div>
                         </div>

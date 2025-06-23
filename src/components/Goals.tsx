@@ -60,8 +60,8 @@ const Goals: React.FC = () => {
         <section id="goals" className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                <div className="absolute top-20 right-40 w-40 h-40 bg-blue-100 rounded-full opacity-30 blur-3xl"></div>
-                <div className="absolute bottom-40 left-20 w-60 h-60 bg-purple-100 rounded-full opacity-40 blur-3xl"></div>
+                <div className="absolute top-20 right-40 w-40 h-40 bg-gray-100 rounded-full opacity-30 blur-3xl"></div>
+                <div className="absolute bottom-40 left-20 w-60 h-60 bg-gray-100 rounded-full opacity-40 blur-3xl"></div>
             </div>
             
             <div className="container mx-auto px-4 relative z-10">
@@ -97,7 +97,7 @@ const Goals: React.FC = () => {
                                     whileHover={{ y: -10, transition: { duration: 0.2 } }}
                                 >
                                     <div className="p-8">
-                                        <div className="w-14 h-14 mb-6 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                                        <div className="w-14 h-14 mb-6 rounded-full bg-gray-100 flex items-center justify-center text-gray-600">
                                             {goal.icon}
                                         </div>
                                         <h3 className="text-xl font-bold mb-4 text-gray-800">{goal.title}</h3>
@@ -116,8 +116,8 @@ const Goals: React.FC = () => {
                     viewport={{ once: true, margin: "-100px" }}
                     className="bg-white rounded-2xl shadow-xl p-8 md:p-12 relative overflow-hidden"
                 >
-                    <div className="absolute top-0 right-0 w-40 h-40 bg-blue-50 rounded-full opacity-70 transform translate-x-20 -translate-y-20"></div>
-                    <div className="absolute bottom-0 left-0 w-40 h-40 bg-purple-50 rounded-full opacity-70 transform -translate-x-20 translate-y-20"></div>
+                    <div className="absolute top-0 right-0 w-40 h-40 bg-gray-50 rounded-full opacity-70 transform translate-x-20 -translate-y-20"></div>
+                    <div className="absolute bottom-0 left-0 w-40 h-40 bg-gray-50 rounded-full opacity-70 transform -translate-x-20 translate-y-20"></div>
                     
                     <div className="relative">
                         <h3 className="text-2xl font-bold mb-8 text-center text-gray-800">
@@ -125,7 +125,7 @@ const Goals: React.FC = () => {
                         </h3>
                         
                         <div className="relative">
-                            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-blue-200"></div>
+                            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gray-200"></div>
                             
                             {timeline.map((item, index) => (
                                 <motion.div 
@@ -138,11 +138,11 @@ const Goals: React.FC = () => {
                                 >
                                     <div className="flex items-center">
                                         <div className="flex flex-col items-center mr-4 md:mr-8">
-                                            <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm z-10">
+                                            <div className="w-10 h-10 rounded-full bg-gray-600 text-white flex items-center justify-center font-bold text-sm z-10">
                                                 {item.year}
                                             </div>
                                             {index < timeline.length - 1 && (
-                                                <div className="w-0.5 h-12 bg-blue-200"></div>
+                                                <div className="w-0.5 h-12 bg-gray-200"></div>
                                             )}
                                         </div>
                                         <div className="bg-white rounded-lg shadow-md p-5 ml-2 flex-1 md:ml-0">
@@ -166,13 +166,13 @@ const Goals: React.FC = () => {
                         href="mailto:your-email@example.com" 
                         className="inline-flex items-center group relative"
                     >
-                        <span className="relative z-10 py-3 px-8 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-medium rounded-full shadow-md group-hover:shadow-lg transition-all duration-300">
+                        <span className="relative z-10 py-3 px-8 bg-gradient-to-r from-gray-500 to-gray-700 text-white font-medium rounded-full shadow-md group-hover:shadow-lg transition-all duration-300">
                             Let's Connect and Build Something Amazing
                             <svg className="w-5 h-5 inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                             </svg>
                         </span>
-                        <span className="absolute inset-0 rounded-full bg-blue-600 opacity-50 blur-lg group-hover:opacity-75 transition-opacity duration-300"></span>
+                        <span className="absolute inset-0 rounded-full bg-gray-600 opacity-50 blur-lg group-hover:opacity-75 transition-opacity duration-300"></span>
                     </a>
                 </motion.div>
             </div>
