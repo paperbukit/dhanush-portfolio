@@ -38,6 +38,15 @@ const AllProjects: React.FC = () => {
             liveLink: 'https://eldenringchecklist.netlify.app/',
             banner: '/elden_ring_game_breathtaking_d.jpeg',
             date: '2025-06-22'
+        },
+        {
+            title: 'AI PDF Chatbot',
+            description: 'A chatbot for interacting with PDF documents using AI.',
+            tags: ['React', 'JavaScript', 'CSS'],
+            link: 'https://github.com/paperbukit/pdf-chatbot',
+            liveLink: 'https://paperbukit-pdf-chatbot.streamlit.app/',
+            banner: '/talking_robot_app_logo_icon_di.jpeg',
+            date: '2025-06-24'
         }
     ];
 
