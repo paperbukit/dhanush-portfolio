@@ -49,6 +49,15 @@ const Projects: React.FC = () => {
             liveLink: 'https://paperbukit-pdf-chatbot.streamlit.app/',
             banner: '/talking_robot_app_logo_icon_di.jpeg',
             date: '2025-06-24'
+        },
+        {
+            title: 'Streakify',
+            description: 'A modern productivity app combining tasks, Pomodoro, streak tracking, and gamified XP system. Offline-first and mobile-optimized.',
+            tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'PWA'],
+            link: 'https://github.com/paperbukit/streakify',
+            liveLink: 'https://streakify-paperbukit.netlify.app/',
+            banner: '/streakify_logo_banner.jpeg',
+            date: '2025-07-20'
         }
     ];
 
