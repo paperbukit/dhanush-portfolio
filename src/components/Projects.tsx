@@ -12,7 +12,8 @@ const Projects: React.FC = () => {
             link: 'https://github.com/paperbukit/AI-Discord-Chatbot',
             bgcolor: 'from-gray-400 to-gray-600',
             banner: '\discord_ai_bot_app_logo_icon_d.jpeg',
-            date: '2025-01-03'
+            date: '2025-01-03',
+            liveLink: ''
         },
         {
             title: 'eBOOK Platform',
@@ -21,7 +22,8 @@ const Projects: React.FC = () => {
             link: 'https://github.com/paperbukit/eBOOK',
             bgcolor: 'from-amber-400 to-orange-600',
             banner: '\e-book_tablet_kindle_app_logo_.jpeg',
-            date: '2025-04-21'
+            date: '2025-04-21',
+            liveLink: 'https://vvce-ebook.netlify.app/'
         },
         {
             title: 'Cricket Score Predictor',
@@ -30,7 +32,8 @@ const Projects: React.FC = () => {
             link: 'https://github.com/paperbukit/for-college/tree/main/python/cricket_score_prediction',
             bgcolor: 'from-emerald-400 to-teal-600',
             banner: '\cricket_stadium_app_logo_icon_.jpeg',
-            date: '2024-11-13'
+            date: '2024-11-13',
+            liveLink: ''
         },
         {
             title: 'Elden Ring Checklist',
@@ -39,7 +42,8 @@ const Projects: React.FC = () => {
             link: 'https://github.com/paperbukit/ELDENRING-CHECKLIST',
             bgcolor: 'from-purple-400 to-indigo-600',
             banner: '\elden_ring_game_breathtaking_d.jpeg',
-            date: '2025-06-22'
+            date: '2025-06-22',
+            liveLink: 'https://eldenringchecklist.netlify.app/'
         },
         {
             title: 'AI PDF Chatbot',
@@ -112,7 +116,7 @@ const Projects: React.FC = () => {
                     variants={containerVariants}
                     className="grid grid-cols-1 md:grid-cols-3 gap-8"
                 >
-                    {recentProjects.map((project: { title: string; description: string; tags: string[]; link: string; banner: string; }, index: number) => (
+                    {recentProjects.map((project: { title: string; description: string; tags: string[]; link: string; banner: string; liveLink?: string; }, index: number) => (
                         <motion.div
                             key={index}
                             variants={itemVariants}
@@ -135,14 +139,26 @@ const Projects: React.FC = () => {
                                     </span>
                                 ))}
                             </div>
-                            <a
-                                href={project.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-block px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700"
-                            >
-                                View on GitHub
-                            </a>
+                            <div className="flex gap-2 mt-auto">
+                                <a
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-block px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 mt-auto w-fit self-start"
+                                >
+                                    View on GitHub
+                                </a>
+                                {project.liveLink && project.liveLink.trim() !== '' && (
+                                    <a
+                                        href={project.liveLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-block px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 mt-auto w-fit self-start"
+                                    >
+                                        View Live
+                                    </a>
+                                )}
+                            </div>
                         </motion.div>
                     ))}
                 </motion.div>
